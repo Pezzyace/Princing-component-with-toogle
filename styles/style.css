@@ -1,0 +1,225 @@
+.color{
+  color: hsl(240, 78%, 98%);
+  color: hsl(234, 14%, 74%);
+  color: hsl(233, 13%, 49%);
+  color: hsl(232, 13%, 33%);
+}
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: hsl(240, 78%, 98%);
+  height: 100%;
+  width: 100%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 20px 0 20px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(234, 14%, 74%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: hsl(237, 63%, 64%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(237, 63%, 64%);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  width: 100%;
+}
+.nav{
+  margin-bottom: 40px;
+}
+.nav h2{
+  margin-bottom: 20px;
+  color: hsl(233, 13%, 49%);
+  font-size: 20px;
+  text-align: center;
+}
+.nav div{
+  display: flex;
+  align-items: center
+}
+.nav div p{
+  color: hsl(234, 14%, 74%);
+  font-size: 13px;
+}
+.sub-container{
+  display: flex;
+  align-items: center;
+}
+.sub-container section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.price-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basic-container{
+  background-color: #fff;
+  box-shadow: -4px 4px 12px 0px hsla(234, 14%, 74%, 0.445);
+  padding: 25px;
+  width: 70%;
+}
+.master-container{
+  background-color: #fff;
+  box-shadow: 4px 4px 12px 0px hsla(234, 14%, 74%, 0.445);
+  padding: 25px;
+  width: 70%;
+}
+.professional-container{
+  background-image: linear-gradient(180deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  padding: 40px 25px;
+  width: 70%;
+}
+.professional-container h2{
+  color: hsl(240, 78%, 98%);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.professional-container div{
+  border-bottom: 1px solid hsl(240, 78%, 98%);
+  width: 100%;
+}
+.professional-container div p{
+  padding: 15px;
+  text-align: center;
+  color: hsl(240, 78%, 98%)
+}
+.professional-container #prof-annual-price, .professional-container #prof-month-price{
+  font-size: 50px;
+  color: white;
+  padding-bottom: 18px;
+  text-align: center;
+}
+.professional-container #prof-month-price, .basic-container #basic-month-price, .master-container #master-month-price{
+  display: none;
+}
+.professional-container button{
+  margin-top: 25px;
+  border: 1px solid hsl(237, 63%, 64%);
+  background-color: hsl(240, 78%, 98%);
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: hsl(237, 63%, 64%);
+  padding: 10px 0;
+  transition: 0.5s;
+}
+.professional-container button:hover{
+  background-color: transparent;
+  border: 1px solid hsl(240, 78%, 98%);
+  color: hsl(240, 78%, 98%);
+}
+.basic-container h2, .master-container h2{
+  color: hsl(232, 13%, 33%);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.basic-container div, .master-container div{
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  width: 100%;
+}
+.basic-container div p, .master-container div p{
+  padding: 15px;
+  text-align: center;
+  color: hsl(232, 13%, 33%);
+}
+.basic-container button, .master-container button{
+  margin-top: 25px;
+  border: 1px solid hsl(240, 78%, 98%);
+  background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: hsl(240, 78%, 98%);
+  padding: 10px 0;
+  transition: 0.5s;
+}
+.basic-container button:hover, .master-container button:hover{
+  background-image: none;
+  background-color: #fff;
+  border-color: hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+}
+.basic-container #basic-annual-price, .basic-container #basic-month-price{
+  font-size: 50px;
+  color: hsl(237, 63%, 64%);
+  padding-bottom: 18px;
+  text-align: center;
+}
+.master-container #master-annual-price, .master-container #master-month-price{
+  font-size: 50px;
+  color: hsl(237, 63%, 64%);
+  padding-bottom: 18px;
+  text-align: center;
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (width <= 375px){
+  .sub-container{
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+  }
+  .professional-container, .master-container, .basic-container{
+    width: 90%;
+  }
+}

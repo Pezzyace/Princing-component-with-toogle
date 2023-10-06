@@ -2,52 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Princing component with toogle</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
   </style>
 </head>
 <body>
-
-  
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
+  <main>
+    <section class="nav">
+      <h2>Our Pricing</h2>
+      <div>
+        <p>Annually</p>
+        <label class="switch">
+          <input type="checkbox" id="mySwitch">
+          <span class="slider"></span>
+        </label>
+        <p>Monthly</p>
+      </div>
+    </section>
+    <section class="sub-container">
+      <section class="basic-container">
+        <h2>Basic</h2>
+        <div class="price-container">
+          <p id="basic-month-price">&dollar;19.99</p>
+          <p id="basic-annual-price">&dollar;199.99</p>
+        </div>
+        <div><p> 500 GB Storage</p></div>
+        <div><p>2 Users Allowed</p></div>
+        <div><p>Send up to 3 GB</p></div>
+        <button>Learn More</button>
+      </section>
+      <section class="professional-container">
+        <h2>Professional</h2>
+        <div class="price-container">
+          <p id="prof-month-price">&dollar;24.99</p>
+          <p id="prof-annual-price">&dollar;249.99</p>
+        </div>
+        <div><p>1 TB Storage</p></div>
+        <div><p>5 Users Allowed</p></div>
+        <div><p>Send up to 10 GB</p></div>
+        <button>Learn More</button>
+      </section>
+      <section class="master-container">
+        <h2>Master</h2>
+        <div class="price-container">
+          <p id="master-month-price">&dollar;39.99</p>
+          <p id="master-annual-price">&dollar;399.99</p>
+        </div>
+        <div><p>2 TB Storage</p></div>
+        <div><p>10 Users Allowed</p></div>
+        <div><p>Send up to 20 GB</p></div>
+        <button>Learn More</button>
+      </section>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Pezzyace" target="_blank">Peace Akaehomen</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
